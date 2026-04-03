@@ -4,7 +4,7 @@ A Rust HTTP service and CLI tool that scans a project codebase for `@req` annota
 
 Built following Specification-Driven Development (SDD) principles: traceability, DRY, deterministic enforcement, parsimony.
 
-**Status: Phase 1 — project scaffolded, no functionality yet**
+**Status: Phase 2 — scanner core implemented**
 
 ---
 
@@ -69,6 +69,15 @@ _Placeholder — REST API served on port 4010 by default. See [`sdd-coverage-api
 _Placeholder — multi-stage Dockerfile producing an Alpine-based image._
 
 ---
+
+## Core Library (`sdd-core`)
+
+The core library provides:
+
+- **Parser** (`parser.rs`): Reads `requirements.yaml` and `tasks.yaml`, validates all required fields and ISO 8601 timestamps.
+- **Scanner** (`scanner.rs`): Recursively walks a directory, finds `@req` annotations in `.rs`, `.ts`, `.js`, `.py`, `.dart`, `.go` files. Classifies annotations as `impl` or `test` by file-path patterns.
+- **Coverage** (`coverage.rs`): Computes per-requirement status (covered/partial/missing), detects orphan annotations and tasks, aggregates statistics.
+- **Models** (`models.rs`): Shared types used across the library and APIs.
 
 ## Testing
 

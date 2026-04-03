@@ -2,58 +2,58 @@ tasks:
   - id: TASK-001
     requirementId: SCS-PARSE-001
     title: Implement YAML parser for requirements
-    status: open
+    status: done
     createdAt: "2026-04-03T10:00:00Z"
-    updatedAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T12:00:00Z"
 
   - id: TASK-002
     requirementId: SCS-PARSE-002
     title: Implement YAML parser for tasks
-    status: open
+    status: done
     createdAt: "2026-04-03T10:00:00Z"
-    updatedAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T12:00:00Z"
 
   - id: TASK-003
     requirementId: SCS-SCAN-001
     title: Build annotation scanner with multi-language support
-    status: open
+    status: done
     createdAt: "2026-04-03T10:00:00Z"
-    updatedAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T12:00:00Z"
 
   - id: TASK-004
     requirementId: SCS-SCAN-002
     title: Implement test file detection logic
-    status: open
+    status: done
     createdAt: "2026-04-03T10:00:00Z"
-    updatedAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T12:00:00Z"
 
   - id: TASK-005
     requirementId: SCS-COV-001
     title: Implement coverage calculation
-    status: open
+    status: done
     createdAt: "2026-04-03T10:00:00Z"
-    updatedAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T12:00:00Z"
 
   - id: TASK-006
     requirementId: SCS-COV-002
     title: Implement orphan annotation detection
-    status: open
+    status: done
     createdAt: "2026-04-03T10:00:00Z"
-    updatedAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T12:00:00Z"
 
   - id: TASK-007
     requirementId: SCS-COV-003
     title: Implement orphan task detection
-    status: open
+    status: done
     createdAt: "2026-04-03T10:00:00Z"
-    updatedAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T12:00:00Z"
 
   - id: TASK-008
     requirementId: SCS-COV-004
     title: Implement stats computation
-    status: open
+    status: done
     createdAt: "2026-04-03T10:00:00Z"
-    updatedAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T12:00:00Z"
 
   - id: TASK-009
     requirementId: SCS-API-001
