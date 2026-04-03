@@ -13,7 +13,7 @@ fn annotation_regex() -> &'static Regex {
     static RE: OnceLock<Regex> = OnceLock::new();
     // Safety: the pattern is a compile-time constant and is always valid.
     RE.get_or_init(|| {
-        Regex::new(r"(?://|#)\s*@req\s+([\w-]+)")
+        Regex::new(r"^\s*(?:/{2,}|#)\s*@req\s+([\w-]+)")
             .expect("annotation regex is a valid compile-time constant")
     })
 }

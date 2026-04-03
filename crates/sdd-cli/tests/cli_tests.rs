@@ -97,19 +97,15 @@ fn test_cli_strict_mode_passes_on_full_coverage() {
     )
     .unwrap();
 
-    // Construct annotations at runtime so the scanner does not pick them up as
-    // orphans when self-hosting scans this test file.
-    let ann = format!("// @req {}\n", "FR-FULL-001");
-
     let src = dir.path().join("src");
     std::fs::create_dir(&src).unwrap();
-    std::fs::write(src.join("main.rs"), format!("{ann}fn main() {{}}\n")).unwrap();
+    std::fs::write(src.join("main.rs"), "// @req FR-FULL-001\nfn main() {}\n").unwrap();
 
     let tests = dir.path().join("tests");
     std::fs::create_dir(&tests).unwrap();
     std::fs::write(
         tests.join("test_main.rs"),
-        format!("{ann}#[test]\nfn t() {{}}\n"),
+        "// @req FR-FULL-001\n#[test]\nfn t() {}\n",
     )
     .unwrap();
 
@@ -129,16 +125,11 @@ fn test_cli_strict_mode_fails_on_orphan_annotation() {
     )
     .unwrap();
 
-    // Construct annotations at runtime so the scanner does not pick them up as
-    // orphans when self-hosting scans this test file.
-    let real_ann = format!("// @req {}\n", "FR-REAL-001");
-    let ghost_ann = format!("// @req {}\n", "GHOST-001");
-
     let src = dir.path().join("src");
     std::fs::create_dir(&src).unwrap();
     std::fs::write(
         src.join("main.rs"),
-        format!("{real_ann}{ghost_ann}fn main() {{}}\n"),
+        "// @req FR-REAL-001\n// @req GHOST-001\nfn main() {}\n",
     )
     .unwrap();
 
@@ -146,7 +137,7 @@ fn test_cli_strict_mode_fails_on_orphan_annotation() {
     std::fs::create_dir(&tests).unwrap();
     std::fs::write(
         tests.join("test_main.rs"),
-        format!("{real_ann}#[test]\nfn t() {{}}\n"),
+        "// @req FR-REAL-001\n#[test]\nfn t() {}\n",
     )
     .unwrap();
 
