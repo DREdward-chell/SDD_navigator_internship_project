@@ -4,7 +4,7 @@ A Rust HTTP service and CLI tool that scans a project codebase for `@req` annota
 
 Built following Specification-Driven Development (SDD) principles: traceability, DRY, deterministic enforcement, parsimony.
 
-**Status: Phase 2 — scanner core implemented**
+**Status: Phase 3 — REST API implemented**
 
 ---
 
@@ -52,15 +52,32 @@ cargo build --workspace
 
 ---
 
-## Usage
+## Running the server
 
-_Placeholder — will be populated in Phase 2+_
+```bash
+cargo run -p sdd-server
+# or with options:
+SDD_PORT=4010 SDD_SOURCE=./src cargo run -p sdd-server
+```
+
+The server scans on startup and serves on `http://localhost:4010`.
 
 ---
 
 ## API
 
-_Placeholder — REST API served on port 4010 by default. See [`sdd-coverage-api.yaml`](sdd-coverage-api.yaml) for the full OpenAPI spec._
+| Method | Path | Description |
+|--------|------|-------------|
+| GET | `/healthcheck` | Service health + version |
+| GET | `/stats` | Aggregate coverage statistics |
+| GET | `/requirements` | List requirements (`?type`, `?status`, `?sort`, `?order`) |
+| GET | `/requirements/{id}` | Requirement detail with annotations + tasks |
+| GET | `/annotations` | List annotations (`?type`, `?orphans`) |
+| GET | `/tasks` | List tasks (`?status`, `?orphans`, `?sort`, `?order`) |
+| POST | `/scan` | Trigger background re-scan (returns 202) |
+| GET | `/scan` | Current scan status |
+
+See [`sdd-coverage-api.yaml`](sdd-coverage-api.yaml) for the full OpenAPI spec.
 
 ---
 

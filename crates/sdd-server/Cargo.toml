@@ -3,6 +3,10 @@ name = "sdd-server"
 version = "0.1.0"
 edition = "2021"
 
+[lib]
+name = "sdd_server"
+path = "src/lib.rs"
+
 [[bin]]
 name = "sdd-server"
 path = "src/main.rs"
@@ -16,6 +20,8 @@ serde_json = "1"
 tracing = "0.1"
 tracing-subscriber = { version = "0.3", features = ["env-filter"] }
 anyhow = "1"
+chrono = { version = "0.4", features = ["serde"] }
+serde = { version = "1", features = ["derive"] }
 
 [dev-dependencies]
 axum-test = "20"

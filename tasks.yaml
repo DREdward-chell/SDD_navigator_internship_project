@@ -58,58 +58,58 @@ tasks:
   - id: TASK-009
     requirementId: SCS-API-001
     title: Implement /healthcheck endpoint
-    status: open
+    status: done
     createdAt: "2026-04-03T10:00:00Z"
-    updatedAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T14:00:00Z"
 
   - id: TASK-010
     requirementId: SCS-API-002
     title: Implement /stats endpoint
-    status: open
+    status: done
     createdAt: "2026-04-03T10:00:00Z"
-    updatedAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T14:00:00Z"
 
   - id: TASK-011
     requirementId: SCS-API-003
     title: Implement /requirements endpoint with filters
-    status: open
+    status: done
     createdAt: "2026-04-03T10:00:00Z"
-    updatedAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T14:00:00Z"
 
   - id: TASK-012
     requirementId: SCS-API-004
     title: Implement /requirements/{id} endpoint
-    status: open
+    status: done
     createdAt: "2026-04-03T10:00:00Z"
-    updatedAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T14:00:00Z"
 
   - id: TASK-013
     requirementId: SCS-API-005
     title: Implement /annotations endpoint
-    status: open
+    status: done
     createdAt: "2026-04-03T10:00:00Z"
-    updatedAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T14:00:00Z"
 
   - id: TASK-014
     requirementId: SCS-API-006
     title: Implement /tasks endpoint
-    status: open
+    status: done
     createdAt: "2026-04-03T10:00:00Z"
-    updatedAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T14:00:00Z"
 
   - id: TASK-015
     requirementId: SCS-API-007
     title: Implement /scan endpoints
-    status: open
+    status: done
     createdAt: "2026-04-03T10:00:00Z"
-    updatedAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T14:00:00Z"
 
   - id: TASK-016
     requirementId: SCS-ERR-001
     title: Implement error handling
-    status: open
+    status: done
     createdAt: "2026-04-03T10:00:00Z"
-    updatedAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T14:00:00Z"
 
   - id: TASK-017
     requirementId: SCS-CLI-001
