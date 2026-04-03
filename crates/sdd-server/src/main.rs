@@ -7,6 +7,9 @@ use std::{net::SocketAddr, path::PathBuf, sync::Arc};
 use tokio::sync::RwLock;
 use tracing_subscriber::{fmt, prelude::*, EnvFilter};
 
+/// @req SCS-DOCKER-001
+///
+/// Server entry point — this binary is the Docker container entrypoint.
 #[tokio::main]
 async fn main() -> anyhow::Result<()> {
     // Initialize structured logging.

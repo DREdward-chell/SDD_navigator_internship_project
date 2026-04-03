@@ -114,20 +114,20 @@ tasks:
   - id: TASK-017
     requirementId: SCS-CLI-001
     title: Build CLI binary
-    status: open
+    status: done
     createdAt: "2026-04-03T10:00:00Z"
-    updatedAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T16:00:00Z"
 
   - id: TASK-018
     requirementId: SCS-SELF-001
     title: Self-hosting verification
-    status: open
+    status: done
     createdAt: "2026-04-03T10:00:00Z"
-    updatedAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T16:00:00Z"
 
   - id: TASK-019
     requirementId: SCS-DOCKER-001
     title: Create Dockerfile
-    status: open
+    status: done
     createdAt: "2026-04-03T10:00:00Z"
-    updatedAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T16:00:00Z"

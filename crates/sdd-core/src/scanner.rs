@@ -165,8 +165,12 @@ fn is_skipped_dir(entry: &walkdir::DirEntry) -> bool {
     if !entry.file_type().is_dir() {
         return false;
     }
+    // Never skip the root itself — only child directories.
+    if entry.depth() == 0 {
+        return false;
+    }
     let name = entry.file_name().to_string_lossy();
-    name.starts_with('.') || name == "target" || name == "node_modules"
+    name.starts_with('.') || name == "target" || name == "node_modules" || name == "fixtures"
 }
 
 // ---------------------------------------------------------------------------

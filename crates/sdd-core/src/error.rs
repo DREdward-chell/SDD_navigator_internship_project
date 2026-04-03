@@ -1,5 +1,7 @@
 use thiserror::Error;
 
+/// @req SCS-ERR-001
+///
 /// All errors produced by the sdd-core library.
 #[derive(Debug, Error)]
 pub enum CoreError {

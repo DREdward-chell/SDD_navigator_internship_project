@@ -4,7 +4,7 @@ A Rust HTTP service and CLI tool that scans a project codebase for `@req` annota
 
 Built following Specification-Driven Development (SDD) principles: traceability, DRY, deterministic enforcement, parsimony.
 
-**Status: Phase 3 — REST API implemented**
+**Status: Phase 4 — CLI and self-hosting complete**
 
 ---
 
@@ -81,9 +81,24 @@ See [`sdd-coverage-api.yaml`](sdd-coverage-api.yaml) for the full OpenAPI spec.
 
 ---
 
+## CLI
+
+```bash
+# Scan with summary output
+cargo run -p sdd-cli -- scan \
+  --requirements requirements.yaml \
+  --tasks tasks.yaml \
+  --source .
+
+# Strict mode: exit 1 if any requirement is partial/missing or any orphan exists
+cargo run -p sdd-cli -- scan --strict
+```
+
+Self-hosting: the project scans its own source with `--strict` and passes.
+
 ## Docker
 
-_Placeholder — multi-stage Dockerfile producing an Alpine-based image._
+Multi-stage build targeting Alpine. Both `sdd-server` and `sdd-coverage` binaries are included.
 
 ---
 
