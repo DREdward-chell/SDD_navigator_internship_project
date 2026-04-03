@@ -1,0 +1,18 @@
+requirements:
+  - id: FR-TEST-001
+    title: Feature one
+    description: "Service MUST implement feature one."
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"
+
+  - id: FR-TEST-002
+    title: Feature two
+    description: "Service MUST implement feature two."
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"
+
+  - id: FR-TEST-003
+    title: Feature three
+    description: "Service MUST implement feature three."
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"

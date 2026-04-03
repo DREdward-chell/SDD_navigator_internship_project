@@ -1,0 +1,6 @@
+requirements:
+  - id: FR-EMPTY-001
+    title: Empty project requirement
+    description: "Service MUST handle the case where the source directory has no files."
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"

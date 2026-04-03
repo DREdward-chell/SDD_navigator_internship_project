@@ -1,0 +1,6 @@
+requirements:
+  - id: FR-NEST-001
+    title: Nested directory scanning
+    description: "Service MUST recursively scan deeply nested source directories."
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"

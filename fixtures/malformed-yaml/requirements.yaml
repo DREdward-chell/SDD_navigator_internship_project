@@ -1,0 +1,7 @@
+requirements:
+  - id: FR-MAL-001
+    title: Malformed entry
+    description: "This YAML is intentionally broken
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"
+  - : missing_id

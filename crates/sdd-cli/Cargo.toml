@@ -1,0 +1,20 @@
+[package]
+name = "sdd-cli"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "sdd-coverage"
+path = "src/main.rs"
+
+[dependencies]
+sdd-core = { path = "../sdd-core" }
+clap = { version = "4", features = ["derive"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+tokio = { version = "1", features = ["rt"] }
+anyhow = "1"
+
+[dev-dependencies]
+assert_cmd = "2"
+tempfile = "3"

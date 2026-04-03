@@ -1,0 +1,6 @@
+requirements:
+  - id: FR-REAL-001
+    title: Real requirement
+    description: "Service MUST implement this real requirement."
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"

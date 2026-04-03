@@ -1,0 +1,36 @@
+requirements:
+  - id: FR-MIX-001
+    title: Rust annotation
+    description: "Service MUST detect @req annotations in Rust files."
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"
+
+  - id: FR-MIX-002
+    title: TypeScript annotation
+    description: "Service MUST detect @req annotations in TypeScript files."
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"
+
+  - id: FR-MIX-003
+    title: Python annotation
+    description: "Service MUST detect @req annotations in Python files."
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"
+
+  - id: FR-MIX-004
+    title: JavaScript annotation
+    description: "Service MUST detect @req annotations in JavaScript files."
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"
+
+  - id: FR-MIX-005
+    title: Go annotation
+    description: "Service MUST detect @req annotations in Go files."
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"
+
+  - id: FR-MIX-006
+    title: Dart annotation
+    description: "Service MUST detect @req annotations in Dart files."
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"

@@ -2,3 +2,7 @@
 /.idea/InternshipProject.iml
 /.idea/modules.xml
 /.idea/vcs.xml
+/target
+*.swp
+*.swo
+.DS_Store

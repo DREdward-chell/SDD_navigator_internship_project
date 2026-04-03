@@ -1,0 +1,14 @@
+tasks:
+  - id: TASK-001
+    requirementId: FR-REAL-001
+    title: Implement real requirement
+    status: open
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"
+
+  - id: TASK-002
+    requirementId: NONEXISTENT-001
+    title: Orphan task referencing nonexistent requirement
+    status: open
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"

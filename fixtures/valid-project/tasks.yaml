@@ -1,0 +1,14 @@
+tasks:
+  - id: TASK-001
+    requirementId: FR-TEST-001
+    title: Implement feature one
+    status: done
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"
+
+  - id: TASK-002
+    requirementId: FR-TEST-002
+    title: Implement feature two
+    status: open
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"

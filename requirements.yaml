@@ -1,0 +1,114 @@
+requirements:
+  - id: SCS-PARSE-001
+    title: Parse requirements.yaml
+    description: "Service MUST read requirements.yaml from a configurable path and validate that every entry contains id, title, description, createdAt, and updatedAt fields."
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"
+
+  - id: SCS-PARSE-002
+    title: Parse tasks.yaml
+    description: "Service MUST read tasks.yaml from a configurable path and validate that every entry contains id, requirementId, title, status, createdAt, and updatedAt fields."
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"
+
+  - id: SCS-SCAN-001
+    title: Scan @req annotations
+    description: "Scanner MUST find all @req annotations in .rs, .ts, .js, .py, .dart, .go files using language-appropriate comment syntax (// or #)."
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"
+
+  - id: SCS-SCAN-002
+    title: Classify annotations as impl or test
+    description: "Scanner MUST classify each annotation as impl or test based on file path patterns: files in /tests/ directories or matching test_*, *_test.*, *.test.* are test; all others are impl."
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"
+
+  - id: SCS-COV-001
+    title: Calculate per-requirement coverage
+    description: "Service MUST compute coverage status for each requirement: covered (has impl AND test annotations), partial (impl only), missing (no annotations)."
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"
+
+  - id: SCS-COV-002
+    title: Detect orphan annotations
+    description: "Service MUST identify annotations whose reqId does not match any requirement in requirements.yaml."
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"
+
+  - id: SCS-COV-003
+    title: Detect orphan tasks
+    description: "Service MUST identify tasks whose requirementId does not match any requirement in requirements.yaml."
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"
+
+  - id: SCS-COV-004
+    title: Compute project-level statistics
+    description: "Service MUST compute aggregate stats: total requirements, counts by type and status, annotation counts (impl/test/orphan), task counts by status with orphan count, and overall coverage percentage."
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"
+
+  - id: SCS-API-001
+    title: GET /healthcheck
+    description: "Service MUST return JSON with status, version (from Cargo.toml), and ISO 8601 timestamp."
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"
+
+  - id: SCS-API-002
+    title: GET /stats
+    description: "Service MUST return project-wide statistics matching the Stats schema from the OpenAPI spec."
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"
+
+  - id: SCS-API-003
+    title: GET /requirements with filtering and sorting
+    description: "Service MUST return requirements list supporting ?type, ?status, ?sort (id|updatedAt), and ?order (asc|desc) query parameters. Invalid parameter values MUST return 400."
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"
+
+  - id: SCS-API-004
+    title: GET /requirements/{requirementId}
+    description: "Service MUST return a single requirement with all linked annotations and tasks. Non-existent ID MUST return 404 with Error schema."
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"
+
+  - id: SCS-API-005
+    title: GET /annotations with filtering
+    description: "Service MUST return annotations list supporting ?type (impl|test) and ?orphans (true|false) query parameters."
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"
+
+  - id: SCS-API-006
+    title: GET /tasks with filtering and sorting
+    description: "Service MUST return tasks list supporting ?status, ?orphans, ?sort, and ?order query parameters."
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"
+
+  - id: SCS-API-007
+    title: POST /scan and GET /scan
+    description: "POST /scan MUST trigger a background re-scan and return 202. GET /scan MUST return current scan status. A POST during an active scan MUST cancel and restart."
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"
+
+  - id: SCS-ERR-001
+    title: Error handling
+    description: "Service MUST handle missing files (clear error with path), malformed YAML (error with line number), empty source directories (warning, not crash), and permission errors (skip with warning). Service MUST NOT panic under any input."
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"
+
+  - id: SCS-CLI-001
+    title: CLI scan command
+    description: "CLI binary MUST accept --requirements, --tasks, --source, and --strict flags. Without --strict, print summary and exit 0. With --strict, exit 1 if any requirement is missing or partial, or any orphan exists."
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"
+
+  - id: SCS-SELF-001
+    title: Self-hosting verification
+    description: "Running the CLI with --strict against this repository's own codebase MUST pass: all requirements covered, zero orphans."
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"
+
+  - id: SCS-DOCKER-001
+    title: Docker containerization
+    description: "Project MUST include a multi-stage Dockerfile producing an Alpine-based image with both server and CLI binaries."
+    createdAt: "2026-04-03T10:00:00Z"
+    updatedAt: "2026-04-03T10:00:00Z"

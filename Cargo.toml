@@ -1,0 +1,3 @@
+[workspace]
+members = ["crates/sdd-core", "crates/sdd-server", "crates/sdd-cli"]
+resolver = "2"
